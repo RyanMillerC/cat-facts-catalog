@@ -1,0 +1,5 @@
+entries:
+  - name: cat-facts-operator.v0.0.1
+name: preview
+package: cat-facts-operator
+schema: olm.channel
