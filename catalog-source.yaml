@@ -1,0 +1,13 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: cat-facts-catalog
+  namespace: openshift-operators
+spec:
+  sourceType: grpc
+  image: quay.io/rymiller/cat-facts-catalog:latest
+  displayName: Cat Facts Catalog
+  publisher: Ryan Miller
+  updateStrategy:
+    registryPoll:
+      interval: 10m
