@@ -1,0 +1,7 @@
+# OLM semver template for Cat Facts Operator
+Schema: olm.semver
+GenerateMajorChannels: true
+GenerateMinorChannels: false
+Candidate:
+  Bundles:
+  - Image: quay.io/rymiller/cat-facts-operator-bundle:v0.0.1

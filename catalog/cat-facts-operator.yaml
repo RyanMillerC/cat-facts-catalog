@@ -1,4 +1,14 @@
 ---
+defaultChannel: candidate-v0
+name: cat-facts-operator
+schema: olm.package
+---
+entries:
+- name: cat-facts-operator.v0.0.1
+name: candidate-v0
+package: cat-facts-operator
+schema: olm.channel
+---
 image: quay.io/rymiller/cat-facts-operator-bundle:v0.0.1
 name: cat-facts-operator.v0.0.1
 package: cat-facts-operator
