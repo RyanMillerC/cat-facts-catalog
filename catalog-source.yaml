@@ -1,3 +1,5 @@
+# Apply this object to your cluster to add the catalog to OperatorHub.
+# After ~1 minute, search for "Cat Facts Operator" in OperatorHub.
 apiVersion: operators.coreos.com/v1alpha1
 kind: CatalogSource
 metadata:
