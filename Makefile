@@ -4,12 +4,12 @@ IMG := quay.io/rymiller/cat-facts-catalog:latest
 render-template:
 	opm alpha render-template semver -o yaml < ./templates/cat-facts-operator.yaml > catalog/cat-facts-operator.yaml
 
-.PHONY: docker-build
-docker-build:
+.PHONY: catalog-build
+catalog-build:
 	docker build -f catalog.Dockerfile -t "${IMG}" .
 
-.PHONY: docker-push
-docker-push:
+.PHONY: catalog-push
+catalog-push:
 	docker push "${IMG}"
 
 .PHONY: validate
