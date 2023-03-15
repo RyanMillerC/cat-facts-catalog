@@ -4,25 +4,22 @@ Install Cat Facts Operator on OpenShift through Operator Lifecycle Manager
 (OLM). This repo contains code to build an OLM *file-based catalog* that
 includes the bundle for the Cat Facts Operator.
 
-## How to Use this Catalog in OpenShift
+## How to Install Cat Facts from this Catalog
 
-Create this object:
+1. Create a CatalogSource: `oc create -f catalog-source.yaml`
+2. Navigate to *Operators > OperatorHub* in the OpenShift console
+3. Search for *Cat Facts* (It may take up to a minute for the CatalogSource to be ready)
+![Search for Cat Facts](docs/img/operatorhub_search.png)
+4. Install the operator
+    * **Make sure to check *Enabled* for *Console plugin*!** Otherwise you won't install the Cat Facts UI.
+![Install the operator](docs/img/install_operator.png)
+5. Within 1 minute after the installation completes, you will be prompted to
+   refresh your OpenShift console in the top-right corner.
 
-```yaml
-apiVersion: operators.coreos.com/v1alpha1
-kind: CatalogSource
-metadata:
-  name: cat-facts-catalog
-  namespace: openshift-marketplace
-spec:
-  sourceType: grpc
-  image: quay.io/rymiller/cat-facts-catalog:latest
-  displayName: Cat Facts Catalog
-  publisher: Ryan Miller
-  updateStrategy:
-    registryPoll:
-      interval: 10m
-```
+## How to Use Cat Facts
+
+1. Navigate to *Cat Facts > Cat Fact Catalog* in the OpenShift console
+2. Click *Create CatFact*
 
 ## Acknowledgments
 
