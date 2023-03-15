@@ -10,3 +10,4 @@ Candidate:
   - Image: quay.io/rymiller/cat-facts-operator-bundle:v0.0.4
   - Image: quay.io/rymiller/cat-facts-operator-bundle:v0.0.5
   - Image: quay.io/rymiller/cat-facts-operator-bundle:v0.0.6
+  - Image: quay.io/rymiller/cat-facts-operator-bundle:v0.0.7
