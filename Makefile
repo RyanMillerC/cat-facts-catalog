@@ -1,4 +1,6 @@
 IMG := quay.io/rymiller/cat-facts-catalog:latest
+BUILD_OS ?= linux
+BUILD_ARCH ?= amd64
 
 .PHONY:
 all: render-template validate catalog-build catalog-push
@@ -9,7 +11,7 @@ render-template:
 
 .PHONY: catalog-build
 catalog-build:
-	docker build -f catalog.Dockerfile -t "${IMG}" .
+	docker build --platform ${BUILD_OS}/${BUILD_ARCH} --file catalog.Dockerfile --tag "${IMG}" .
 
 .PHONY: catalog-push
 catalog-push:
