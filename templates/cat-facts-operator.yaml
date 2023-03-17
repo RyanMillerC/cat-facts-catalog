@@ -14,6 +14,7 @@ Candidate:
   - Image: quay.io/rymiller/cat-facts-operator-bundle:v0.0.8
   - Image: quay.io/rymiller/cat-facts-operator-bundle:v0.0.9
   - Image: quay.io/rymiller/cat-facts-operator-bundle:v0.0.10
+  - Image: quay.io/rymiller/cat-facts-operator-bundle:v0.0.11
 Fast:
   Bundles:
   - Image: quay.io/rymiller/cat-facts-operator-bundle:v0.0.9
